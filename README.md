@@ -1,7 +1,7 @@
 # Druud: een nacht- en ontwaaklampje
 
 ## Specificatie
-Dit project biedt een lampje om kinderen te helpen bij het niet te vroeg opstaan, dat 3 fases kent:
+Dit project biedt een lampje, om kinderen te helpen bij het niet te vroeg opstaan, dat 3 fases kent:
 1. de nacht, rood, waarbij het kind in bed moet blijven;
 2. het ontwaken, geel, waarbij het binnenkort tijd is om druud te komen;
 3. het opstaan, groen, waarbij het uit bed mag komen;
@@ -33,17 +33,17 @@ Om de Druud te configureren moet allereerst de Arduino IDE worden geinstalleerd 
 
 Voeg `http://arduino.esp8266.com/stable/package_esp8266com_index.json` toe aan Preferences > `Additional Boards Manager URLs‘`
 
-Voeg de `D1 Mini` familie toe via Tools > Board > Boards Manager, dan zoek op `ESP8266` en installeer `esp8366`.
+Voeg de `D1 Mini` familie toe via Tools > Board > Boards Manager, dan zoek op `ESP8266` en installeer `esp8266`.
 
 Sluit de Druud aan via de usb poort
 
 Selecteer via Tools > Board > ESP8266 ... > LOLIN (WEMOS) D1 R2 & Mini
 
-Selecteer via Tools > Port > /dev/usbserial-14310
+Selecteer via Tools > Port > (voor een Mac:) /dev/usbserial-14310 of (voor Windows:) COM1 of COM5 (weet ik niet zeker ...)
 
 Download de software van https://github.com/rimvanvliet/druud/archive/refs/heads/main.zip en pak t uit.
 
-Open de Druud software via File > Open... en open druud.ino
+Open de Druud software via File > Open... en open druud-main/druud/druud.ino
 
 Selecteer `config-template.h` en wijzig de naam naar `config.h` met het drop-down driehoekje, rechts bovenin het Arduino scherm
 
@@ -53,6 +53,8 @@ Via Tools > Manage Libraries:
 - zoek `NTPClient` van Fabrice Weinberg en installeer die.
 - zoek `Timezone` van Jack Christensen en installeer die, en de libraries waar deze van afhankelijk is.
 - zoek `Adafruit_NeoPixel` van Adafruit en installeer die (let op, er zijn librarie met bijna dezelfde naam)
+
+Open de monitor via Tools > Serial Monitor en zorg dat je zowel de monitor als het Arduino IDE venster zelf kunt zien.
 
 Laadt de Druud softare via Sketch > Upload 
 
