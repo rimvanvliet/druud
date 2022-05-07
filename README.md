@@ -1,4 +1,4 @@
-# Druud: Een nacht- en ontwaaklampje
+# Druud: een nacht- en ontwaaklampje
 
 ## Specificatie
 Dit project biedt een lampje om kinderen te helpen bij het niet te vroeg opstaan, dat 3 fases kent:
@@ -6,14 +6,14 @@ Dit project biedt een lampje om kinderen te helpen bij het niet te vroeg opstaan
 2. het ontwaken, geel, waarbij het binnenkort tijd is om druud te komen;
 3. het opstaan, groen, waarbij het uit bed mag komen;
 
-Het lampje maakt gebruik van WiFi om de tijd op te halen; in de configuratie (`config.h`) moet daarom de naam van het Wifi netwerk (`ssid`) en het bijbehorende wachtwoord (`password`)
+Het lampje maakt gebruik van WiFi om de tijd op te halen; in de configuratie (`config.h`) moet daarom de naam van het Wifi netwerk (`ssid`) en het bijbehorende wachtwoord (`password`) worden opgegeven.
 
 Daarnaast kunnen de tijden waarop de kleur wijzigt worden ingesteld als `HH:mm`:
 - `ontwaken  = "06:30";  // van rood -> geel`
 - `druud     = "06:50";  // van geel -> groen`
 - `slapen    = "19:30";  // van groen -> rood`
 
-Tenslotte kunnen de helderheid en de duur van de verkleuring, beide in seconden, worden ingesteld:
+Tenslotte kunnen de helderheid (een getal tussen 1 en 255) en de duur van de verkleuring (in seconden) worden ingesteld:
 - `helderheid  = 10;     // tussen 1 en 255`
 - `duur        = 30;     // seconden van de overgang van rood -> geel en van geel -> groen`
 
@@ -25,12 +25,11 @@ Het project gaat uit van:
 Het Shield moet op de D1 Mini worden gesoldeerd.
 
 ## Voeding
-De Druud wordt gevoed door een USB A naar USB Micro Kabe met een USB oplader.
+De Druud wordt gevoed door een `USB A` naar `USB Micro` kabel en een USB oplader.
 
 ## Installatie en configuratie
-https://averagemaker.com/2018/03/wemos-d1-mini-setup.html
 
-Om de Druud te configureren moet allereerst de Arduino IDE worden geinstalleerd op een computer: zie https://www.arduino.cc/en/software
+Om de Druud te configureren moet allereerst de Arduino IDE worden geinstalleerd op een computer: zie https://www.arduino.cc/en/software; voor Windows is deze ook te downloaden van de Windows store. 
 
 Voeg `http://arduino.esp8266.com/stable/package_esp8266com_index.json` toe aan Preferences > `Additional Boards Manager URLs‘`
 
@@ -46,7 +45,7 @@ Download de software van https://github.com/rimvanvliet/druud/archive/refs/heads
 
 Open de Druud software via File > Open... en open druud.ino
 
-Wijzig de naam van 
+Selecteer `config-template.h` en wijzig de naam naar `config.h` met het drop-down driehoekje, rechts bovenin het Arduino scherm
 
 Wijzig de instellingen in `config.h`
 
@@ -55,6 +54,6 @@ Via Tools > Manage Libraries:
 - zoek `Timezone` van Jack Christensen en installeer die, en de libraries waar deze van afhankelijk is.
 - zoek `Adafruit_NeoPixel` van Adafruit en installeer die (let op, er zijn librarie met bijna dezelfde naam)
 
-Laadt de Druud softare Sketch > Upload 
+Laadt de Druud softare via Sketch > Upload 
 
-Ontkoppel de Druud van de computer en sluit hem aan op de USB lader
+Als het uploaden gelukt is, ontkoppel dan de Druud van de computer en sluit hem aan op de USB lader
