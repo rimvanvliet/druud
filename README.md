@@ -46,9 +46,9 @@ Download de software van https://github.com/rimvanvliet/druud/archive/refs/heads
 
 Open de Druud software via File > Open... en open druud.ino
 
+Wijzig de naam van 
 
-
-Wijzig de instellingen in Config.h
+Wijzig de instellingen in `config.h`
 
 Via Tools > Manage Libraries:
 - zoek `NTPClient` van Fabrice Weinberg en installeer die.
